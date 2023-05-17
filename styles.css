@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Source+Sans+3:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*************************************Tekst*********************************/
+
+a{
+  font-family: 'Shadows Into Light', cursive;
+  color: black;
+}
+
+h1{
+  font-family: 'Shadows Into Light', cursive;
+  color: #839073;
+}
+
+h2{
+  font-family: 'Shadows Into Light', cursive;
+  color: #839073;
+}
+
+h3{
+  font-family: 'Shadows Into Light', cursive;
+  color: #000000;
+}
+
+p{
+  font-family: 'Source Sans 3', sans-serif;
+  color: black;
+  font-size: large;
+}
+
+li{
+  font-family: 'Source Sans 3', sans-serif;
+  color: black;
+}
+
+
+
+/*************************************Header*********************************/
+
+header{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.logo-container {
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  align-content: center;
+  width: 10%;
+  height: auto;
+}
+
+.logo-container:hover{
+  transform: scale(1.2);
+
+}
+
+.nav-container {
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 2em;
+    padding-left: 2em;
+    padding-right:2em;
+    justify-content: space-between;
+  }
+
+  header a:hover{
+  color: #cda8a0;
+  }
+  
+  #burgermenu{
+    display: none; /*så den ikke vises på laptop*/
+  }
+  /*************************************Dropdown*********************************/
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  width: auto; /* Juster efter behov */
+  background-color: #cda8a0;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a{
+    color: #ffe5d4;
+    white-space: nowrap;
+  }
+  
+  .dropdown-content a:hover{
+   border-bottom: #839073;
+    border-radius: 5px;
+  }
+
+
+
+    /*************************************Forside*********************************/
+
+    .forsidebillede {
+      position: relative;
+      height: 100vh;
+    }
+    
+    .forsidebillede img {
+     position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .forside {
+      position: absolute;
+      height: auto;
+      width: 100%;
+      padding-left: 30%;
+      padding-right: 30%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      text-align: center;
+    }
+    
+    .forside h1 {
+      color: white;
+      margin-top: 0;
+      font-size: 5rem; 
+      font-weight: 100;
+
+    }
+    
+    .forside p {
+      color: white;
+      margin-top: 1rem; /* tilføjet en margin for at skabe plads mellem overskrift og tekst */
+      margin-left: 10%;
+      font-size: 1rem; 
+      max-width: 80%; /* begrænser bredden af teksten for at gøre det lettere at læse */
+    }
+
+
+    .call-to-action {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .knap {
+      background-color: #839073;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family:'Shadows Into Light', cursive;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .forside h1, .forside p, .knap{
+      opacity: 0; 
+      animation: fade-in 2s ease-in-out forwards; 
+    }
+    
+    @keyframes fade-in {
+      from {
+        opacity: 0; 
+      }
+      to {
+        opacity: 1; 
+      }
+    }
+
+    #forsidemobil{
+      display: none;
+    }
+
+
+    /*************************************Surf i Thy*********************************/
+    
+    .thysurf{
+      height: auto;
+      width: 100%;
+      padding-left: 30%;
+      padding-right: 30%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      text-align: center;
+
+    }
+   
+
+    .thysurfbillede{
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+      
+    }
+
+    .brødtekst1{
+      display: block;
+      margin-top: 10%; 
+      margin-left: 22%;
+      margin-right: 22%;
+    }
+
+   .tre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10%;
+    
+   }
+
+   .brødtekst2{
+    display: block;
+      margin-top: 10%; 
+      margin-left: 22%;
+      margin-right: 22%;
+      margin-bottom: 10%;
+
+   }
+
+
+
+   /*************************************spots*********************************/
+
+   .brødtekst1b{
+    display: block;
+      margin-top: 8%; 
+      margin-left: 22%;
+      margin-right: 22%;
+   }
+
+   .fakta {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 10%;
+    
+  }
+  
+  .fakta section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  ul {
+    list-style-type: circle;
+    
+  }
+  
+  iframe {
+    max-width: 100%;
+  }
+
+      /*************************************Skoler*********************************/
+
+
+  .flexskole{
+    display: flex;
+    width: 60%;
+    height: auto;
+    justify-content: center;
+    gap:2%;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    flex-wrap: wrap;
+}
+
+.pladsholdert{
+
+  height: 300px;
+  width: 500px;
+  background-color: red;
+}
+
+ .laes:hover{
+  color: #cda8a0;
+ }
+
+    /*************************************Footer*********************************/
+
+    footer {
+      background-color: #a0aecf;
+      padding: 5%;
+      text-align: center;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .footertekst {
+      flex: 1 1 100%;
+      margin-bottom: 1%;
+    }
+    
+    footer p {
+      color: #ffffff;
+      font-size: 14px;
+      margin: 0;
+    }
+   
+    
+    
+    
+    
+@media screen and (max-width:750px){
+  
+    header{
+    display: none;
+  }
+
+  /*billeder*/ 
+
+/*forside laptop*/ 
+#forside1{
+  display: none;
+}
+
+/*forside mobil*/ 
+#forsidemobil{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.forside{
+  padding: 10%;
+  padding-top: 20%;
+}
+
+/*knap*/ 
+.call-to-action{
+  top: 80%;
+}
+
+/******************************Burger************************/ 
+#burgermenu{
+  margin-top: -25px;
+  display: block; /*burgermenu vises*/
+}
+.menu-items {
+  margin-top:-25px; /*for at få menu-items kassen til at gå helt op til toppen af skærmen - ellers vistes lidt af billedet i toppen*/
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  /*margin-top: 20px;*/
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li { /*for at alle punkter ikke får en prik foran sig (fordi <li>)*/
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox { /*styling af den usynlige chechbox, der ligger under burgerikonet, så det virker når man klikker på det - ellers er det bare et billede*/
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 40px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines { /*ja - burgerlinjernes styling så de ses som burger*/
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line { /*styling af den enkelte linje i burgeren*/
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: black
+}
+
+.nav-container .hamburger-lines .line1 { 
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 { 
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items { /*styling til hvordan linksene er placeret og transformeres*/
+  padding-top: 120px;
+  background-color: white;
+  height: 110vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  line-height: 10PX;
+}
+
+
+.navbar .menu-items li { /*tekststørrelse, -type og den slags*/
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 30%;
+}
+.navbar .menu-items .ddc { /*det samme, men til de punkter, der var dropdown content (derfor ddc) i laptopnaven*/
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+#burgerlogo {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 30%;
+  height: auto; 
+
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items { /* hvad der sker når den usynlige checkbox er checket af*/
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 { /*øverste burgerlinje drejer højre ende ned*/
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 { /*midterste linje forsvinder*/
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {/*nederste burgerlinje drejer højre ende op*/
+  transform: rotate(45deg);
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{/*logoet ligger lige nu under kassen med menu-items og skjules - så display=none er ligegyldigt, vi skal have den ind i menu-items kassen, hvis den skal vises, men det tænker jeg vi gør, hvis vi har tid*/
+  display: block;
+}
+
+
+
+}
+    
+   
+    
